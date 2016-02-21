@@ -28,9 +28,9 @@
 
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
-				echo "generate/${image}.png";
+				echo "./generate/${image}.png";
 			} else {
-				echo "image/${image}.png";
+				echo "./image/${image}.png";
 			}
 		}
 		if ($submit == "作成") {
