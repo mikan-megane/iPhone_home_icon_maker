@@ -103,20 +103,20 @@
 				  <label class="control-label">文字色</label>
 				  <div class="radio">
 					  <label>
-						  <input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
-						  <div class="point-circle" style="background:rgb(249, 249, 249);"></div>
+						  <input class=”form-control hide” type="radio" name="color" value="white" <?php color_restore("white");?>>
+						  <div class="point-circle form-control" style="background:rgb(249, 249, 249);"></div>
 					  </label>
 					  <label>
-						  <input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
-						  <div class="point-circle" style="background:rgb(51, 51, 51);"></div>
+						  <input class=”form-control hide” type="radio" name="color" value="black" <?php color_restore("black");?>>
+						  <div class="point-circle form-control" style="background:rgb(51, 51, 51);"></div>
 					  </label>
 					  <label>
-						  <input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
-						  <div class="point-circle" style="background:rgb(244, 67, 54);"></div>
+						  <input class=”form-control hide” type="radio" name="color" value="red" <?php color_restore("red");?>>
+						  <div class="point-circle form-control" style="background:rgb(244, 67, 54);"></div>
 					  </label>
 					  <label>
-						  <input class=”form-control” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
-						  <div class="point-circle" style="background:rgb(33, 150, 244);"></div>
+						  <input class=”form-control hide” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
+						  <div class="point-circle form-control" style="background:rgb(33, 150, 244);"></div>
 					  </label>
 				  </div>
 			  </div>
@@ -124,12 +124,12 @@
 				  <label class="control-label">背景</label>
 				  <div class="radio">
 					  <label>
-						  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-						  <img class="iphone-radius" src="<?php image_generater("white");?>" alt="white" />
+						  <input class=”form-control hide” type="radio" name="image" value="white" <?php image_restore("white");?>>
+						  <img class="iphone-radius .form-control" src="<?php image_generater("white");?>" alt="white" />
 					  </label>
 					  <label>
-						  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
-						  <img class="iphone-radius" src="<?php image_generater("black");?>" alt="black" />
+						  <input class=”form-control hide” type="radio" name="image" value="black" <?php image_restore("black");?>>
+						  <img class="iphone-radius .form-control" src="<?php image_generater("black");?>" alt="black" />
 					  </label>
 				  </div>
 			  </div>
