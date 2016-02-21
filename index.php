@@ -28,11 +28,9 @@
 
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
-				$imageurl = realpath("generate/${image}.png");
-				echo $imageurl;
+				echo "generate/${image}.png";
 			} else {
-				$imageurl = realpath("image/${image}.png");
-				echo $imageurl;
+				echo "image/${image}.jpg";
 			}
 		}
 		if ($submit == "作成") {
