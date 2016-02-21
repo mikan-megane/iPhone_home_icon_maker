@@ -33,6 +33,11 @@
 				echo "image/${image}.jpg";
 			}
 		}
+		if (@$_POST["text"]) {
+			$text = $_POST["text"];
+		} else {
+			$text = "";
+		}
 		if ($submit == "作成") {
 			$selectimage = $_POST["image"];
 	?>
@@ -47,7 +52,7 @@
 		  <form action="index.php" method="post">
 			  <div class="form-group">
 				  <label class="control-label">メモ</label>
-				  <textarea class="form-control" name="text" rows="5" placeholder="Text input"></textarea>
+				  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
 			  </div>
 			  <div class="form-group">
 				  <label class="control-label">背景</label>
