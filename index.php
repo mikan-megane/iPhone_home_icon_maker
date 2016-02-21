@@ -150,4 +150,11 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-<?php } ?>
+<?php }
+
+//削除
+$fileName = "./generate/*.png";
+foreach ( glob($fileName) as $val ) {
+    unlink($val);
+}
+?>
