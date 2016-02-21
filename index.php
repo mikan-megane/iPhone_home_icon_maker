@@ -54,6 +54,12 @@
 	?>
 			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
+	</head>
+	<body>
+		<div class="container">
+			<img class="iphone-radius" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
+		</div>
+	</body>
 	<?php
 		} else {
 	?>
