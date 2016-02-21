@@ -49,7 +49,7 @@
 		} else {
 			$text = "";
 		}
-		if ($submit == "作成") {
+		if (@$_POST["submit"] == "作成") {
 			$selectimage = $_POST["image"];
 	?>
 			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
