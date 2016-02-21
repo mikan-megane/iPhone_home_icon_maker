@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<?php
-		$myurl = "http://mikan-php.pe.hu/"
+		$myurl = "http://mikan-php.pe.hu/";
 		function image_generater($image){
 			global $myurl;
 			if (@$_POST["submit"]) {
