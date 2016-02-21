@@ -20,7 +20,23 @@
 		function image_generater($image){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
-				$color = imagecolorallocate( $im, 63, 63, 255 );
+				switch ($_POST["color"]) {
+					case 'white':
+					$color = imagecolorallocate( $im, 249, 249, 249 );
+						break;
+					case 'black':
+					$color = imagecolorallocate( $im, 51, 51, 51 );
+						break;
+					case 'red':
+					$color = imagecolorallocate( $im, 244, 67, 54 );
+						break;
+					case 'blue':
+					$color = imagecolorallocate( $im, 33, 150, 244 );
+						break;
+					default:
+						$color = imagecolorallocate( $im, 63, 63, 255 );
+						break;
+				}
 				$font = 'yasasisa.ttf';
 				imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
 				ImagePNG( $im,"./generate/${image}.png" );
