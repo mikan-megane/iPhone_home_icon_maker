@@ -125,11 +125,11 @@
 				  <div class="radio">
 					  <label>
 						  <input class=”hide” type="radio" name="image" value="white" <?php image_restore("white");?>>
-						  <img class="iphone-radius .form-control" src="<?php image_generater("white");?>" alt="white" />
+						  <img class="iphone-radius form-control" src="<?php image_generater("white");?>" alt="white" />
 					  </label>
 					  <label>
 						  <input class=”hide” type="radio" name="image" value="black" <?php image_restore("black");?>>
-						  <img class="iphone-radius .form-control" src="<?php image_generater("black");?>" alt="black" />
+						  <img class="iphone-radius form-control" src="<?php image_generater("black");?>" alt="black" />
 					  </label>
 				  </div>
 			  </div>
@@ -150,11 +150,4 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-<?php }
-
-//削除
-$fileName = "./generate/*.png";
-foreach ( glob($fileName) as $val ) {
-    unlink($val);
-}
-?>
+<?php } ?>
