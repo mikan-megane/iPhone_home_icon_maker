@@ -54,11 +54,11 @@
 				  <div class="radio">
 					  <label>
 						  <input class=”form-control” type="radio" name="image" value="white" checked>
-						  <img class="iphone-radius" src="<?php image_generater('white');?>" alt="white" />
+						  <img class="iphone-radius" src="<?php image_generater("white");?>" alt="white" />
 					  </label>
 					  <label>
 						  <input class=”form-control” type="radio" name="image" value="black">
-						  <img class="iphone-radius" src="<?php image_generater('black');?>" alt="black" />
+						  <img class="iphone-radius" src="<?php image_generater("black");?>" alt="black" />
 					  </label>
 				  </div>
 			  </div>
