@@ -18,7 +18,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<?php
+		$myurl = "http://mikan-php.pe.hu/"
 		function image_generater($image){
+			global $myurl;
 			if (@$_POST["submit"]) {
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
 				$color = imagecolorallocate( $im, 63, 63, 255 );
@@ -28,9 +30,9 @@
 
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
-				echo "./generate/${image}.png";
+				return "${myurl}generate/${image}.png";
 			} else {
-				echo "./image/${image}.png";
+				return "${myurl}image/${image}.png";
 			}
 		}
 		if ($submit == "作成") {
