@@ -23,8 +23,8 @@
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
 				$color = imagecolorallocate( $im, 63, 63, 255 );
 				$font = 'yasasisa.ttf';
-				imagettftext( $im, 30, 0, 30,60, $color, $font, $text );
-				ImagePNG( $im,"generate/${image}.png" );
+				imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
+				ImagePNG( $im,"./generate/${image}.png" );
 
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
@@ -34,10 +34,10 @@
 			}
 		}
 		if ($submit == "作成") {
-			$text = @$_POST['text'];
+			$selectimage = $_POST["image"];
 	?>
-			<link rel="apple-touch-icon" href="generate/apple-touch-icon.png" >
-			<link rel="apple-touch-icon" sizes="180x180" href="generate/apple-touch-icon.png">
+			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
+			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
 	<?php
 		} else {
 	?>
