@@ -18,8 +18,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<?php
-		function image_generater($image){
-			if (@$_POST["submit"]) {
+		function image_generater($image){//画像生成
+			if (@$_POST["submit"]) {//２回め以降
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
 				$color = imagecolorallocate( $im, 63, 63, 255 );
 				$font = 'yasasisa.ttf';
@@ -29,11 +29,22 @@
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
 				echo "generate/${image}.png";
-			} else {
+			} else {//初回
 				echo "image/${image}.jpg";
 			}
 		}
-		if (@$_POST["text"]) {
+		function radio_restore($image){//画像選択復元
+			if (@$_POST["image"]) {
+				if ($_POST["image"] == $image) {
+					echo "checked";
+				}
+			} else {
+				if ($image == "white") {//デフォはwhite
+					echo "checked";
+				}
+			}
+		}
+		if (@$_POST["text"]) {//$text 復元
 			$text = $_POST["text"];
 		} else {
 			$text = "";
@@ -49,7 +60,7 @@
   </head>
   <body>
 	  <div class="container">
-		  <form action="index.php" method="post">
+		  <form action="./" method="post">
 			  <div class="form-group">
 				  <label class="control-label">メモ</label>
 				  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
@@ -58,11 +69,11 @@
 				  <label class="control-label">背景</label>
 				  <div class="radio">
 					  <label>
-						  <input class=”form-control” type="radio" name="image" value="white" checked>
+						  <input class=”form-control” type="radio" name="image" value="white" <?php radio_restore("white");?>>
 						  <img class="iphone-radius" src="<?php image_generater("white");?>" alt="white" />
 					  </label>
 					  <label>
-						  <input class=”form-control” type="radio" name="image" value="black">
+						  <input class=”form-control” type="radio" name="image" value="black" <?php radio_restore("black");?>>
 						  <img class="iphone-radius" src="<?php image_generater("black");?>" alt="black" />
 					  </label>
 				  </div>
