@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>メモジェネレータ</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -54,6 +53,7 @@
 	?>
 			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
+			<title>memo</title>
 	</head>
 	<body>
 		<div class="container">
@@ -63,6 +63,7 @@
 	<?php
 		} else {
 	?>
+	<title>メモジェネレータ</title>
   </head>
   <body>
 	  <div class="container">
