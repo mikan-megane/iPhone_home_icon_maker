@@ -54,7 +54,7 @@
 					echo "checked";
 				}
 			} else {
-				if ($color == "white") {//デフォはwhite
+				if ($color == "black") {//デフォはblack
 					echo "checked";
 				}
 			}
@@ -114,12 +114,12 @@
 					</div>
 					<div class="radio panel-body">
 						<label>
-							<input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
-							<div class="point-circle white_visible" style="background:rgb(249, 249, 249);"></div>
-						</label>
-						<label>
 							<input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
 							<div class="point-circle" style="background:rgb(51, 51, 51);"></div>
+						</label>
+						<label>
+							<input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
+							<div class="point-circle white_visible" style="background:rgb(249, 249, 249);"></div>
 						</label>
 						<label>
 							<input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
