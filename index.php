@@ -97,64 +97,62 @@
 		  <header>
 		  	<h3>メモジェネレータ</h3>
 		  </header>
-		  <div class="well">
-			  <form action="./" method="post">
-				  <div class="form-group panel panel-default">
-					  <div class="panel-heading">
-						  <label class="control-label">メモ</label>
-					  </div>
-					  <div class="panel-body">
-						  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
-					  </div>
+		  <form action="./" method="post">
+			  <div class="form-group panel panel-default">
+				  <div class="panel-heading">
+					  <label class="control-label">メモ</label>
 				  </div>
-				  <div class="form-group panel panel-default">
-					  <div class="panel-heading">
-						  <label class="control-label">文字色</label>
-					  </div>
-					  <div class="radio panel-body">
-						  <label>
-							  <input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
-							  <div class="point-circle" style="background:rgb(249, 249, 249);"></div>
-						  </label>
-						  <label>
-							  <input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
-							  <div class="point-circle" style="background:rgb(51, 51, 51);"></div>
-						  </label>
-						  <label>
-							  <input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
-							  <div class="point-circle" style="background:rgb(244, 67, 54);"></div>
-						  </label>
-						  <label>
-							  <input class=”form-control” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
-							  <div class="point-circle" style="background:rgb(33, 150, 244);"></div>
-						  </label>
-					  </div>
+				  <div class="panel-body">
+					  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
 				  </div>
-				  <div class="form-group panel panel-default">
-					  <div class="panel-heading">
-						  <label class="control-label">背景</label>
-					  </div>
-					  <div class="radio panel-body">
-						  <label>
-							  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-							  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
-						  </label>
-						  <label>
-							  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
-							  <img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
-						  </label>
-					  </div>
+			  </div>
+			  <div class="form-group panel panel-default">
+				  <div class="panel-heading">
+					  <label class="control-label">文字色</label>
 				  </div>
-				  <div class="raw">
-					  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						  <input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
-					  </div>
-					  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						  <input class="btn btn-primary col-xs-6 col-sm-6 col-md-6 col-lg-6 form-control" type="submit" name="submit" value="作成">
-					  </div>
+				  <div class="radio panel-body">
+					  <label>
+						  <input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
+						  <div class="point-circle" style="background:rgb(249, 249, 249);"></div>
+					  </label>
+					  <label>
+						  <input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
+						  <div class="point-circle" style="background:rgb(51, 51, 51);"></div>
+					  </label>
+					  <label>
+						  <input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
+						  <div class="point-circle" style="background:rgb(244, 67, 54);"></div>
+					  </label>
+					  <label>
+						  <input class=”form-control” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
+						  <div class="point-circle" style="background:rgb(33, 150, 244);"></div>
+					  </label>
 				  </div>
-			  </form>
-		  </div>
+			  </div>
+			  <div class="form-group panel panel-default">
+				  <div class="panel-heading">
+					  <label class="control-label">背景</label>
+				  </div>
+				  <div class="radio panel-body">
+					  <label>
+						  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
+						  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
+					  </label>
+					  <label>
+						  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
+						  <img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
+					  </label>
+				  </div>
+			  </div>
+			  <div class="raw">
+				  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					  <input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
+				  </div>
+				  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					  <input class="btn btn-primary col-xs-6 col-sm-6 col-md-6 col-lg-6 form-control" type="submit" name="submit" value="作成">
+				  </div>
+			  </div>
+		  </form>
 	  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
