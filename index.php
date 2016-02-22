@@ -91,11 +91,13 @@
 		<div class="container">
 			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
-			<form action="./" method="post">
+			<form action="./" method="post"><!--復元用-->
 				<input type="hidden" name="text" value="<?php echo $text; ?>">
 				<input type="hidden" name="color" value="<?php echo $_POST["color"]; ?>">
 				<input type="hidden" name="image" value="<?php echo $_POST["image"]; ?>">
-				<button class="btn btn-default btn-lg btn-block foot2" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-chevron-left" style="margin-right:15px;"></span>戻る</button>
+				<div class="foot2">
+					<button class="btn btn-default btn-lg btn-block" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-chevron-left" style="margin-right:15px;"></span>戻る</button>
+				</div>
 			</form>
 		</div>
 		<footer class="footer">
