@@ -8,87 +8,79 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<?php
+		function image_generater($image){//画像生成
+			if (@$_POST["submit"]) {//２回め以降
+				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
+				switch ($_POST["color"]) {//色指定
+					case 'white':
+					$color = imagecolorallocate( $im, 249, 249, 249 );
+						break;
+					case 'black':
+					$color = imagecolorallocate( $im, 51, 51, 51 );
+						break;
+					case 'red':
+					$color = imagecolorallocate( $im, 244, 67, 54 );
+						break;
+					case 'blue':
+					$color = imagecolorallocate( $im, 33, 150, 244 );
+						break;
+					default:
+						$color = imagecolorallocate( $im, 63, 63, 255 );
+						break;
+				}
+				$font = 'yasasisa.ttf';
+				imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
+				ImagePNG( $im,"./generate/${image}.png" );
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		<script type="text/javascript">
-			$("#textclear").on("click", function() {
-				$('#memotext').val('');
-			});
-		</script>
-		<?php
-			function image_generater($image){//画像生成
-				if (@$_POST["submit"]) {//２回め以降
-					$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
-					switch ($_POST["color"]) {//色指定
-						case 'white':
-						$color = imagecolorallocate( $im, 249, 249, 249 );
-							break;
-						case 'black':
-						$color = imagecolorallocate( $im, 51, 51, 51 );
-							break;
-						case 'red':
-						$color = imagecolorallocate( $im, 244, 67, 54 );
-							break;
-						case 'blue':
-						$color = imagecolorallocate( $im, 33, 150, 244 );
-							break;
-						default:
-							$color = imagecolorallocate( $im, 63, 63, 255 );
-							break;
-					}
-					$font = 'yasasisa.ttf';
-					imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
-					ImagePNG( $im,"./generate/${image}.png" );
-
-					imagecolordeallocate( $im,$color );
-					imagedestroy( $im );
-					echo "generate/${image}.png";
-				} else {//初回
-					echo "image/${image}.jpg";
-				}
+				imagecolordeallocate( $im,$color );
+				imagedestroy( $im );
+				echo "generate/${image}.png";
+			} else {//初回
+				echo "image/${image}.jpg";
 			}
-			function color_restore($color){//カラー選択復元
-				if (@$_POST["color"]) {
-					if ($_POST["color"] == $color) {
-						echo "checked";
-					}
-				} else {
-					if ($color == "black") {//デフォはblack
-						echo "checked";
-					}
+		}
+		function color_restore($color){//カラー選択復元
+			if (@$_POST["color"]) {
+				if ($_POST["color"] == $color) {
+					echo "checked";
 				}
-			}
-			function image_restore($image){//画像選択復元
-				if (@$_POST["image"]) {
-					if ($_POST["image"] == $image) {
-						echo "checked";
-					}
-				} else {
-					if ($image == "white") {//デフォはwhite
-						echo "checked";
-					}
-				}
-			}
-			if (@$_POST["text"]) {//$text 復元
-				$text = $_POST["text"];
 			} else {
-				$text = "";
+				if ($color == "black") {//デフォはblack
+					echo "checked";
+				}
 			}
-			if (@$_POST["submit"] == "create") {
-				$selectimage = $_POST["image"];
-		?>
-				<title>memo</title>
-				<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
-				<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
+		}
+		function image_restore($image){//画像選択復元
+			if (@$_POST["image"]) {
+				if ($_POST["image"] == $image) {
+					echo "checked";
+				}
+			} else {
+				if ($image == "white") {//デフォはwhite
+					echo "checked";
+				}
+			}
+		}
+		if (@$_POST["text"]) {//$text 復元
+			$text = $_POST["text"];
+		} else {
+			$text = "";
+		}
+		if (@$_POST["submit"] == "create") {
+			$selectimage = $_POST["image"];
+	?>
+			<title>memo</title>
+			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
+			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
 	</head>
 	<body>
 		<header>
@@ -132,9 +124,7 @@
 						<label class="control-label">メモ</label>
 					</div>
 					<div class="panel-body">
-						<textarea class="form-control" name="text" rows="3" id="memotext" placeholder="ここに
-めもを"><?php echo $text; ?></textarea>
-						<button type="button" class="btn btn-link" id="textclear"><span class="glyphicon glyphicon-remove"></span></button>
+						<textarea class="form-control" name="text" rows="3" placeholder="Text input"><?php echo $text; ?></textarea>
 					</div>
 				</div>
 				<div class="form-group panel panel-default">
@@ -195,6 +185,8 @@
 				<p class="text-muted">Copyright © 2016 mikan-megane</p>
 			</div>
 		</footer>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 	</body>
