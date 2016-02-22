@@ -75,7 +75,7 @@
 		} else {
 			$text = "";
 		}
-		if (@$_POST["submit"] == "作成") {
+		if (@$_POST["submit"] == "create") {
 			$selectimage = $_POST["image"];
 	?>
 			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
@@ -152,10 +152,10 @@
 				</div>
 				<div class="raw">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						  <button class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー"><span class="glyphicon glyphicon-search"></span>プレビュー</button>
+						<button class="btn btn-primary form-control" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-search"></span>プレビュー</button>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<input class="btn btn-success form-control" type="submit" name="submit" value="作成"><span class="glyphicon glyphicon-search"></span></input>
+						<button class="btn btn-success form-control" type="submit" name="submit" value="create"><span class="glyphicon glyphicon-send"></span>作成</button>
 					</div>
 				</div>
 			</form>
