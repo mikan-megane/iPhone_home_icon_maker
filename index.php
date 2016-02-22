@@ -16,6 +16,11 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+		$("#textclear").on("click", function() {
+			$('#memotext').val('');
+		});
+	</script>
 	<?php
 		function image_generater($image){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
@@ -124,8 +129,9 @@
 						<label class="control-label">メモ</label>
 					</div>
 					<div class="panel-body">
-						<textarea class="form-control" name="text" rows="3" placeholder="Text input"><?php echo $text; ?></textarea>
-						<button type="button" name="clear" id="textclear"><span class="glyphicon glyphicon-remove"></span></button>
+						<textarea class="form-control" name="text" rows="3" id="memotext" placeholder="ここに
+めもを"><?php echo $text; ?></textarea>
+						<button type="button" class="btn btn-link" id="textclear"><span class="glyphicon glyphicon-remove"></span></button>
 					</div>
 				</div>
 				<div class="form-group panel panel-default">
