@@ -89,8 +89,14 @@
 			</div>
 		</header>
 		<div class="container">
-			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
+			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
+			<form action="./" method="post">
+				<input type="hidden" name="text" value="<?php echo $text; ?>">
+				<input type="hidden" name="color" value="<?php $_POST["color"] ?>">
+				<input type="hidden" name="image" value="<?php $_POST["image"] ?>">
+				<button class="btn btn-default btn-lg btn-block" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-chevron-left" style="margin-right:15px;"></span>戻る</button>
+			</form>
 		</div>
 		<footer class="footer">
 			<div class="container">
