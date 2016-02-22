@@ -100,7 +100,7 @@
 		  <div class="well">
 			  <form action="./" method="post">
 				  <div class="form-group panel panel-default">
-					  <div class="panel-title">
+					  <div class="panel-heading">
 						  <label class="control-label">メモ</label>
 					  </div>
 					  <div class="panel-body">
@@ -108,7 +108,7 @@
 					  </div>
 				  </div>
 				  <div class="form-group panel panel-default">
-					  <div class="panel-title">
+					  <div class="panel-heading">
 						  <label class="control-label">文字色</label>
 					  </div>
 					  <div class="radio panel-body">
@@ -131,7 +131,7 @@
 					  </div>
 				  </div>
 				  <div class="form-group panel panel-default">
-					  <div class="panel-title">
+					  <div class="panel-heading">
 						  <label class="control-label">背景</label>
 					  </div>
 					  <div class="radio panel-body">
