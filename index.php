@@ -99,13 +99,15 @@
 		  </header>
 		  <div class="well">
 			  <form action="./" method="post">
-				  <div class="form-group">
-					  <label class="control-label">メモ</label>
-					  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
+				  <div class="form-group panel panel-default">
+					  <label class="control-label panel-title">メモ</label>
+					  <div class="panel-body">
+						  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
+					  </div>
 				  </div>
-				  <div class="form-group">
-					  <label class="control-label">文字色</label>
-					  <div class="radio">
+				  <div class="form-group panel panel-default">
+					  <label class="control-label panel-title">文字色</label>
+					  <div class="radio panel-body">
 						  <label>
 							  <input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
 							  <div class="point-circle" style="background:rgb(249, 249, 249);"></div>
@@ -124,9 +126,9 @@
 						  </label>
 					  </div>
 				  </div>
-				  <div class="form-group">
-					  <label class="control-label">背景</label>
-					  <div class="radio">
+				  <div class="form-group panel panel-default">
+					  <label class="control-label panel-title">背景</label>
+					  <div class="radio panel-body">
 						  <label>
 							  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
 							  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
