@@ -78,14 +78,25 @@
 		if (@$_POST["submit"] == "create") {
 			$selectimage = $_POST["image"];
 	?>
+			<title>memo</title>
 			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
-			<title>memo</title>
 	</head>
 	<body>
+		<header>
+			<div class="container">
+				<h3>メモジェネレータ</h3>
+			</div>
+		</header>
 		<div class="container">
-			<img class="iphone-radius" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
+			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
+			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
 		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">Copyright © 2016 mikan-megane</p>
+			</div>
+		</footer>
 	</body>
 	<?php
 		} else {
