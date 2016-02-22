@@ -20,7 +20,7 @@
 		function image_generater($image){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
-				switch ($_POST["color"]) {
+				switch ($_POST["color"]) {//色指定
 					case 'white':
 					$color = imagecolorallocate( $im, 249, 249, 249 );
 						break;
@@ -134,22 +134,26 @@
 					  <label class="control-label">背景</label>
 				  </div>
 				  <div class="radio panel-body">
-					  <label>
-						  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-						  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
-					  </label>
-					  <label>
-						  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
-						  <img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
-					  </label>
+					  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+						  <label>
+							  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
+							  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
+						  </label>
+					  </div>
+					  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+						  <label>
+							  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
+							  <img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
+						  </label>
+					  </div>
 				  </div>
 			  </div>
 			  <div class="raw">
-				  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 					  <input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
 				  </div>
-				  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					  <input class="btn btn-primary col-xs-6 col-sm-6 col-md-6 col-lg-6 form-control" type="submit" name="submit" value="作成">
+				  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					  <input class="btn btn-primary form-control" type="submit" name="submit" value="作成">
 				  </div>
 			  </div>
 		  </form>
