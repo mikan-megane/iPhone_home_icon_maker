@@ -91,14 +91,14 @@
 		<div class="container">
 			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
-			<form action="./" method="post"><!--復元用-->
-				<input type="hidden" name="text" value="<?php echo $text; ?>">
-				<input type="hidden" name="color" value="<?php echo $_POST["color"]; ?>">
-				<input type="hidden" name="image" value="<?php echo $_POST["image"]; ?>">
-				<div class="container foot2">
+			<div class="row">
+				<form class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" action="./" method="post"><!--復元用-->
+					<input type="hidden" name="text" value="<?php echo $text; ?>">
+					<input type="hidden" name="color" value="<?php echo $_POST["color"]; ?>">
+					<input type="hidden" name="image" value="<?php echo $_POST["image"]; ?>">
 					<button class="btn btn-default btn-lg btn-block" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-chevron-left" style="margin-right:15px;"></span>戻る</button>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
@@ -154,7 +154,7 @@
 					<div class="panel-heading">
 						<label class="control-label">背景</label>
 					</div>
-					<div class="raw radio panel-body">
+					<div class="row radio panel-body">
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
@@ -169,7 +169,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="raw">
+				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-bottom:15px;">
 						<button class="btn btn-primary btn-lg btn-block" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-search" style="margin-right:15px;"></span>プレビュー</button>
 					</div>
