@@ -163,7 +163,7 @@
 		<br>
 		<footer class="footer">
 			<div class="container">
-				<p class="text-muted">mikan-megane 2016</p>
+				<p class="text-muted">Copyright © 2016 mikan-megane All Rights Reserved.</p>
 			</div>
 		</footer>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
