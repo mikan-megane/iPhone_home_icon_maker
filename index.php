@@ -136,7 +136,7 @@
 						<label class="control-label">背景</label>
 					</div>
 					<div class="radio panel-body">
-						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3" style="margin-bottom:15px;">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
 								<img class="iphone-radius img-responsive white_visible" src="<?php image_generater("white");?>" alt="white" />
@@ -152,10 +152,10 @@
 				</div>
 				<div class="raw">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<button class="btn btn-primary form-control" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-search"></span>プレビュー</button>
+						<button class="btn btn-primary form-control" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-search"></span> プレビュー</button>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<button class="btn btn-success form-control" type="submit" name="submit" value="create"><span class="glyphicon glyphicon-send"></span>作成</button>
+						<button class="btn btn-success form-control" type="submit" name="submit" value="create"><span class="glyphicon glyphicon-send"></span> 作成</button>
 					</div>
 				</div>
 			</form>
