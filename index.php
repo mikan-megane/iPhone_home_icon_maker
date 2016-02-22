@@ -94,6 +94,9 @@
   </head>
   <body>
 	  <div class="container">
+		  <header>
+		  	<h3>メモジェネレータ</h3>
+		  </header>
 		  <div class="well">
 			  <form action="./" method="post">
 				  <div class="form-group">
@@ -126,11 +129,11 @@
 					  <div class="radio">
 						  <label>
 							  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-							  <img class="iphone-radius" src="<?php image_generater("white");?>" alt="white" />
+							  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
 						  </label>
 						  <label>
 							  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
-							  <img class="iphone-radius" src="<?php image_generater("black");?>" alt="black" />
+							  <img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
 						  </label>
 					  </div>
 				  </div>
