@@ -100,13 +100,17 @@
 		  <div class="well">
 			  <form action="./" method="post">
 				  <div class="form-group panel panel-default">
-					  <label class="control-label panel-title">メモ</label>
+					  <div class="panel-title">
+						  <label class="control-label">メモ</label>
+					  </div>
 					  <div class="panel-body">
 						  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
 					  </div>
 				  </div>
 				  <div class="form-group panel panel-default">
-					  <label class="control-label panel-title">文字色</label>
+					  <div class="panel-title">
+						  <label class="control-label">文字色</label>
+					  </div>
 					  <div class="radio panel-body">
 						  <label>
 							  <input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
@@ -127,7 +131,9 @@
 					  </div>
 				  </div>
 				  <div class="form-group panel panel-default">
-					  <label class="control-label panel-title">背景</label>
+					  <div class="panel-title">
+						  <label class="control-label">背景</label>
+					  </div>
 					  <div class="radio panel-body">
 						  <label>
 							  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
