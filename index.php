@@ -152,10 +152,13 @@
 				</div>
 				<div class="raw">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
+						<div class="input-group">
+						  <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+						  <input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
+						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<input class="btn btn-success form-control" type="submit" name="submit" value="作成">
+						<input class="btn btn-success form-control" type="submit" name="submit" value="作成"><span class="glyphicon glyphicon-search"></span></input>
 					</div>
 				</div>
 			</form>
