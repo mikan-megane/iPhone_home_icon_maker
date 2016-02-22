@@ -115,7 +115,7 @@
 					<div class="radio panel-body">
 						<label>
 							<input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
-							<div class="point-circle" style="background:rgb(249, 249, 249);"></div>
+							<div class="point-circle white_visible" style="background:rgb(249, 249, 249);"></div>
 						</label>
 						<label>
 							<input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
@@ -139,7 +139,7 @@
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-								<img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
+								<img class="iphone-radius img-responsive white_visible" src="<?php image_generater("white");?>" alt="white" />
 							</label>
 						</div>
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
