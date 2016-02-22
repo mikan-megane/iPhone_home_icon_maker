@@ -93,8 +93,8 @@
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
 			<form action="./" method="post">
 				<input type="hidden" name="text" value="<?php echo $text; ?>">
-				<input type="hidden" name="color" value="<?php $_POST["color"]; ?>">
-				<input type="hidden" name="image" value="<?php $_POST["image"]; ?>">
+				<input type="hidden" name="color" value="<?php echo $_POST["color"]; ?>">
+				<input type="hidden" name="image" value="<?php echo $_POST["image"]; ?>">
 				<button class="btn btn-default btn-lg btn-block foot2" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-chevron-left" style="margin-right:15px;"></span>戻る</button>
 			</form>
 		</div>
