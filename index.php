@@ -95,7 +95,7 @@
 				<input type="hidden" name="text" value="<?php echo $text; ?>">
 				<input type="hidden" name="color" value="<?php echo $_POST["color"]; ?>">
 				<input type="hidden" name="image" value="<?php echo $_POST["image"]; ?>">
-				<div class="foot2 container">
+				<div class="container foot2">
 					<button class="btn btn-default btn-lg btn-block" type="submit" name="submit" value="preview"><span class="glyphicon glyphicon-chevron-left" style="margin-right:15px;"></span>戻る</button>
 				</div>
 			</form>

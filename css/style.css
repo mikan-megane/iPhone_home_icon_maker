@@ -33,5 +33,5 @@ body {
 .foot2{
 	position: absolute;
 	bottom: 60px;
-	width: 100%;
+	padding: 0 !important;
 }
