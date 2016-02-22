@@ -92,7 +92,7 @@
 			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
 			<div class="row">
-				<form class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" action="./" method="post"><!--復元用-->
+				<form class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" style="margin-top:22px;" action="./" method="post"><!--復元用-->
 					<input type="hidden" name="text" value="<?php echo $text; ?>">
 					<input type="hidden" name="color" value="<?php echo $_POST["color"]; ?>">
 					<input type="hidden" name="image" value="<?php echo $_POST["image"]; ?>">
@@ -125,6 +125,7 @@
 					</div>
 					<div class="panel-body">
 						<textarea class="form-control" name="text" rows="3" placeholder="Text input"><?php echo $text; ?></textarea>
+						<button type="button" name="clear" id="textclear"><span class="glyphicon glyphicon-remove"></span></button>
 					</div>
 				</div>
 				<div class="form-group panel panel-default">
