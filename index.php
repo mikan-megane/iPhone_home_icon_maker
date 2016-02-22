@@ -98,7 +98,7 @@
 				<h3>メモジェネレータ</h3>
 			</div>
 		</header>
-		<div class="container">
+		<div class="container divider">
 			<form action="./" method="post">
 				<div class="form-group panel panel-default">
 					<div class="panel-heading">
@@ -161,7 +161,7 @@
 			</form>
 		</div>
 
-		<footer class="footer">
+		<footer class="footer divider">
 			<div class="container">
 				<p class="text-muted">mikan-megane 2016</p>
 			</div>
