@@ -105,7 +105,7 @@
 						<label class="control-label">メモ</label>
 					</div>
 					<div class="panel-body">
-						<textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
+						<textarea class="form-control" name="text" rows="3" placeholder="Text input"><?php echo $text; ?></textarea>
 					</div>
 				</div>
 				<div class="form-group panel panel-default">
