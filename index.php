@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 	<?php
 		function image_generater($image){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
@@ -91,78 +91,85 @@
 		} else {
 	?>
 		<title>メモジェネレータ</title>
-  </head>
-  <body>
-	  <div class="container">
-		  <header>
-		  	<h3>メモジェネレータ</h3>
-		  </header>
-		  <form action="./" method="post">
-			  <div class="form-group panel panel-default">
-				  <div class="panel-heading">
-					  <label class="control-label">メモ</label>
-				  </div>
-				  <div class="panel-body">
-					  <textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
-				  </div>
-			  </div>
-			  <div class="form-group panel panel-default">
-				  <div class="panel-heading">
-					  <label class="control-label">文字色</label>
-				  </div>
-				  <div class="radio panel-body">
-					  <label>
-						  <input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
-						  <div class="point-circle" style="background:rgb(249, 249, 249);"></div>
-					  </label>
-					  <label>
-						  <input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
-						  <div class="point-circle" style="background:rgb(51, 51, 51);"></div>
-					  </label>
-					  <label>
-						  <input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
-						  <div class="point-circle" style="background:rgb(244, 67, 54);"></div>
-					  </label>
-					  <label>
-						  <input class=”form-control” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
-						  <div class="point-circle" style="background:rgb(33, 150, 244);"></div>
-					  </label>
-				  </div>
-			  </div>
-			  <div class="form-group panel panel-default">
-				  <div class="panel-heading">
-					  <label class="control-label">背景</label>
-				  </div>
-				  <div class="radio panel-body">
-					  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-						  <label>
-							  <input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-							  <img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
-						  </label>
-					  </div>
-					  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-						  <label>
-							  <input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
-							  <img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
-						  </label>
-					  </div>
-				  </div>
-			  </div>
-			  <div class="raw">
-				  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-					  <input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
-				  </div>
-				  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-					  <input class="btn btn-primary form-control" type="submit" name="submit" value="作成">
-				  </div>
-			  </div>
-		  </form>
-	  </div>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h3>メモジェネレータ</h3>
+			</div>
+		</header>
+		<div class="container">
+			<form action="./" method="post">
+				<div class="form-group panel panel-default">
+					<div class="panel-heading">
+						<label class="control-label">メモ</label>
+					</div>
+					<div class="panel-body">
+						<textarea class="form-control" name="text" rows="5" placeholder="Text input"><?php echo $text; ?></textarea>
+					</div>
+				</div>
+				<div class="form-group panel panel-default">
+					<div class="panel-heading">
+						<label class="control-label">文字色</label>
+					</div>
+					<div class="radio panel-body">
+						<label>
+							<input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
+							<div class="point-circle" style="background:rgb(249, 249, 249);"></div>
+						</label>
+						<label>
+							<input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
+							<div class="point-circle" style="background:rgb(51, 51, 51);"></div>
+						</label>
+						<label>
+							<input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
+							<div class="point-circle" style="background:rgb(244, 67, 54);"></div>
+						</label>
+						<label>
+							<input class=”form-control” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
+							<div class="point-circle" style="background:rgb(33, 150, 244);"></div>
+						</label>
+					</div>
+				</div>
+				<div class="form-group panel panel-default">
+					<div class="panel-heading">
+						<label class="control-label">背景</label>
+					</div>
+					<div class="radio panel-body">
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+							<label>
+								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
+								<img class="iphone-radius img-responsive" src="<?php image_generater("white");?>" alt="white" />
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+							<label>
+								<input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
+								<img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="raw">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<input class="btn btn-primary form-control" type="submit" name="submit" value="プレビュー">
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<input class="btn btn-success form-control" type="submit" name="submit" value="作成">
+					</div>
+				</div>
+			</form>
+		</div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">mikan-megane 2016</p>
+			</div>
+		</footer>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
 <?php } ?>
