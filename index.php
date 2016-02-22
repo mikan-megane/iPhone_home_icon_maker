@@ -38,7 +38,7 @@
 						break;
 				}
 				$font = 'yasasisa.ttf';
-				imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
+				imagettftext( $im, 15, 0, 15,60, $color, $font, $_POST['text'] );
 				ImagePNG( $im,"./generate/${image}.png" );
 
 				imagecolordeallocate( $im,$color );
