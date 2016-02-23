@@ -156,16 +156,10 @@
 					</div>
 					<div class="row radio panel-body">
 						<?php
-						// ディレクトリのパスを記述
-						$dir = "./image/" ;
-
-						// ディレクトリの存在を確認し、ハンドルを取得
-						if( is_dir( $dir ) && $handle = opendir( $dir ) ) {
-							// ループ処理
+						$imgdir = "./image/" ;
+						if( is_dir( $imgdir ) && $handle = opendir( $imgdir ) ) {
 							while( ($file = readdir($handle)) !== false ) {
-								// ファイルのみ取得
-								if( filetype( $path = $dir . $file ) == "file" ) {
-									// 各ファイルへの処理
+								if( filetype( $path = $imgdir . $file ) == "file" ) {
 									$file = basename($path,".jpg");
 									?>
 									<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
