@@ -89,7 +89,7 @@
 			</div>
 		</header>
 		<div class="container">
-			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong>：共有ボタンからホームに追加してください。</div>
+			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong><p style="margin-right:31px;">共有ボタンからホームに追加してください。</p></div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
 			<div class="row">
 				<form class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" style="margin-top:22px;" action="./" method="post"><!--復元用-->
