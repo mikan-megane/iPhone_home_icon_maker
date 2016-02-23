@@ -1,4 +1,4 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
+<Files ~ "^\.(htaccess|htpasswd|png)$">
 deny from all
 </Files>
 Options -Indexes
