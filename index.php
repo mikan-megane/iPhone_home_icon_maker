@@ -125,6 +125,7 @@
 					</div>
 					<div class="panel-body">
 						<textarea class="form-control" name="text" rows="3" placeholder="Text input"><?php echo $text; ?></textarea>
+						<span class="help-block">個人情報の入力はお控えください。</span>
 					</div>
 				</div>
 				<div class="form-group panel panel-default">
