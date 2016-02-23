@@ -133,19 +133,19 @@
 					</div>
 					<div class="radio panel-body">
 						<label>
-							<input class=”form-control” type="radio" name="color" value="black" <?php color_restore("black");?>>
+							<input class=”form-control hidden” type="radio" name="color" value="black" <?php color_restore("black");?>>
 							<div class="point-circle" style="background:rgb(51, 51, 51);"></div>
 						</label>
 						<label>
-							<input class=”form-control” type="radio" name="color" value="white" <?php color_restore("white");?>>
+							<input class=”form-control hidden” type="radio" name="color" value="white" <?php color_restore("white");?>>
 							<div class="point-circle white_visible" style="background:rgb(249, 249, 249);"></div>
 						</label>
 						<label>
-							<input class=”form-control” type="radio" name="color" value="red" <?php color_restore("red");?>>
+							<input class=”form-control hidden” type="radio" name="color" value="red" <?php color_restore("red");?>>
 							<div class="point-circle" style="background:rgb(244, 67, 54);"></div>
 						</label>
 						<label>
-							<input class=”form-control” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
+							<input class=”form-control hidden” type="radio" name="color" value="blue" <?php color_restore("blue");?>>
 							<div class="point-circle" style="background:rgb(33, 150, 244);"></div>
 						</label>
 					</div>
@@ -164,7 +164,7 @@
 									?>
 									<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 										<label>
-											<input class=”form-control” type="radio" name="image" value="<?php echo $file; ?>" <?php image_restore($file);?>>
+											<input class=”form-control hidden” type="radio" name="image" value="<?php echo $file; ?>" <?php image_restore($file);?>>
 											<img class="iphone-radius img-responsive <?php if($file == "white"){echo white_visible;} ?>" src="<?php image_generater($file);?>" alt="<?php echo $file; ?>" />
 										</label>
 									</div>

@@ -10,8 +10,8 @@
 	border: 1px gray solid;
 }
 
-input[type=radio] {
-	display: none;
+input[type="radio"] + div,input[type="radio"] + img {
+	border: rgba(0, 0, 0, 0) 1px solid;
 }
 input[type="radio"]:checked + div ,input[type="radio"]:checked + img {
 	border: #66afe9 1px solid;
