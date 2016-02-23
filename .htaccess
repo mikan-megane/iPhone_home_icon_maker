@@ -1,5 +1,10 @@
-<Files ~ "^\.(htaccess|htpasswd|png)$">
+<Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
 Options -Indexes
+ErrorDocument 403 403-error.html
+ErrorDocument 404 404-error.html
+ErrorDocument 500 500-error.html
+ErrorDocument 502 502-error.html
+ErrorDocument 504 504-error.html
 order deny,allow
