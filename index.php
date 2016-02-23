@@ -174,9 +174,11 @@
 											<img class="iphone-radius img-responsive <?php if($file == "white"){ echo white_visible;} ?> " src="<?php image_generater($file);?>" alt="<?php echo $file; ?>" />
 										</label>
 									</div>
+									<?php
 								}
 							}
 						}
+						?>
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
