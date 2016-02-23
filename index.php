@@ -90,7 +90,7 @@
 			</div>
 		</header>
 		<div class="container">
-			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong><p style="margin-left:31px;">共有ボタンからホームに追加してください。<br>分からない方は<a href="http://www.ipodwave.com/iphone/howto/website_home.html#a" class="alert-link">こちら</a>を御覧ください</p></div>
+			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong><p style="margin-left:31px;">共有ボタンからホームに追加してください。<br>分からない方は<a target="_blank" href="http://www.ipodwave.com/iphone/howto/website_home.html#a" class="alert-link">こちら</a>を御覧ください</p></div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
 			<div class="row">
 				<form class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" style="margin-top:22px;" action="./" method="post"><!--復元用-->
