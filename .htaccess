@@ -7,4 +7,7 @@ ErrorDocument 404 /404-error.html
 ErrorDocument 500 /500-error.html
 ErrorDocument 502 /502-error.html
 ErrorDocument 504 /504-error.html
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.mikan-php\.pe\.hu)(:80)? [NC]
+RewriteRule ^(.*) http://mikan-php.pe.hu/$1 [R=301,L]
 order deny,allow
