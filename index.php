@@ -157,7 +157,7 @@
 					<div class="row radio panel-body">
 						<?php
 						// ディレクトリのパスを記述
-						$dir = "./image" ;
+						$dir = "./image/" ;
 
 						// ディレクトリの存在を確認し、ハンドルを取得
 						if( is_dir( $dir ) && $handle = opendir( $dir ) ) {
