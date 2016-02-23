@@ -179,13 +179,6 @@
 							}
 						}
 						 ?>
-
-						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-							<label>
-								<input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
-								<img class="iphone-radius img-responsive" src="<?php image_generater("black");?>" alt="black" />
-							</label>
-						</div>
 					</div>
 				</div>
 				<div class="row">
