@@ -14,8 +14,8 @@ input[type="radio"]{
 }
 
 input[type="radio"]:checked + div ,input[type="radio"]:checked + img {
-	-webkit-box-shadow:0 0 0 1px white, 0 0 3px 3px #0073aa;
-	box-shadow:0 0 0 1px white, 0 0 3px 3px #0073aa;
+	-webkit-box-shadow:0 0 2px 1px white, 0 0 2px 4px #0073aa;
+	box-shadow:0 0 2px 1px white, 0 0 2px 4px #0073aa;
 }
 
 /* Sticky footer styles
