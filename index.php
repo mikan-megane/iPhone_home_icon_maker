@@ -22,16 +22,16 @@
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
 				switch ($_POST["color"]) {//色指定
 					case 'white':
-					$color = imagecolorallocate( $im, 249, 249, 249 );
+						$color = imagecolorallocate( $im, 249, 249, 249 );
 						break;
 					case 'black':
-					$color = imagecolorallocate( $im, 51, 51, 51 );
+						$color = imagecolorallocate( $im, 51, 51, 51 );
 						break;
 					case 'red':
-					$color = imagecolorallocate( $im, 244, 67, 54 );
+						$color = imagecolorallocate( $im, 244, 67, 54 );
 						break;
 					case 'blue':
-					$color = imagecolorallocate( $im, 33, 150, 244 );
+						$color = imagecolorallocate( $im, 33, 150, 244 );
 						break;
 					default:
 						$color = imagecolorallocate( $im, 63, 63, 255 );
