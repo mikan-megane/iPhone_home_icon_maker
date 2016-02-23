@@ -166,6 +166,7 @@
 								// ファイルのみ取得
 								if( filetype( $path = $dir . $file ) == "file" ) {
 									// 各ファイルへの処理
+									$file = basename($path,".png")
 									echo $path ;
 								}
 							}
