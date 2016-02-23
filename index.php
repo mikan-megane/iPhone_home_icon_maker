@@ -83,6 +83,7 @@
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
 	</head>
 	<body>
+		<?php include_once("analyticstracking.php") ?>
 		<header>
 			<div class="container">
 				<h3>メモジェネレータ</h3>
@@ -112,6 +113,7 @@
 		<title>メモジェネレータ</title>
 	</head>
 	<body>
+		<?php include_once("analyticstracking.php") ?>
 		<header>
 			<div class="container">
 				<h3>メモジェネレータ</h3>
