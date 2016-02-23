@@ -155,23 +155,6 @@
 						<label class="control-label">背景</label>
 					</div>
 					<div class="row radio panel-body">
-						<?php
-						// ディレクトリのパスを記述
-						$imgdir = "./image" ;
-
-						// ディレクトリの存在を確認し、ハンドルを取得
-						if( is_dir( $imgdir ) && $handle = opendir( $imgdir ) ) {
-							// ループ処理
-							while( ($file = readdir($handle)) !== false ) {
-								// ファイルのみ取得
-								if( filetype( $path = $imgdir . $file ) == "file" ) {
-									$file = basename($path,".jpg");
-									// 各ファイルへの処理
-									echo $file;
-								}
-							}
-						}
-						?>
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
