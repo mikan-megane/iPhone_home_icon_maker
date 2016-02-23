@@ -155,6 +155,22 @@
 						<label class="control-label">背景</label>
 					</div>
 					<div class="row radio panel-body">
+						<?php
+						// ディレクトリのパスを記述
+						$dir = "/var/www/syncer/" ;
+
+						// ディレクトリの存在を確認し、ハンドルを取得
+						if( is_dir( $dir ) && $handle = opendir( $dir ) ) {
+							// ループ処理
+							while( ($file = readdir($handle)) !== false ) {
+								// ファイルのみ取得
+								if( filetype( $path = $dir . $file ) == "file" ) {
+									// 各ファイルへの処理
+									echo $path ;
+								}
+							}
+						}
+						 ?>
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
