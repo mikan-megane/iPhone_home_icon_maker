@@ -167,17 +167,19 @@
 								if( filetype( $path = $dir . $file ) == "file" ) {
 									// 各ファイルへの処理
 									$file = basename($path,".jpg");
-									echo $file ;
+									?>
+									<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+										<label>
+											<input class=”form-control” type="radio" name="image" value="<?php echo $file; ?>" <?php image_restore($file);?>>
+											<img class="iphone-radius img-responsive <?php if($file == "white"){echo white_visible;} ?>" src="<?php image_generater($file);?>" alt="<?php echo $file; ?>" />
+										</label>
+									</div>
+									<?php
 								}
 							}
 						}
 						 ?>
-						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-							<label>
-								<input class=”form-control” type="radio" name="image" value="white" <?php image_restore("white");?>>
-								<img class="iphone-radius img-responsive white_visible" src="<?php image_generater("white");?>" alt="white" />
-							</label>
-						</div>
+
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 							<label>
 								<input class=”form-control” type="radio" name="image" value="black" <?php image_restore("black");?>>
