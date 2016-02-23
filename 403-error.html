@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 <meta name="author" content="">
 <title>403 Forbidden</title>
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
 /* Error Page Inline Styles */
@@ -53,8 +53,8 @@ body {
 <div class="container">
 <div class="jumbotron">
   <h1><i class="fa fa-ban red"></i> 403 Forbidden</h1>
-  <p class="lead">Sorry! You don't have access permissions for that on <em><span id="display-domain"></span></em>.</p>
-    <p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg green">Take Me To The Homepage</a>
+  <p class="lead">ごめんなさい！あなたは <em><span id="display-domain"></span></em> からアクセス権限を貰っていません。</p>
+    <p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg green">トップへ</a>
       <script type="text/javascript">
           function checkSite(){
             var currentSite = window.location.hostname;
@@ -85,6 +85,6 @@ body {
 <!--Scripts-->
 <!-- jQuery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
