@@ -3,4 +3,3 @@ deny from all
 </Files>
 Options -Indexes
 order deny,allow
-deny from http://mikan-php.pe.hu/generate/
