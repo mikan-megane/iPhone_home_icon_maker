@@ -166,7 +166,9 @@
 									<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 										<label>
 											<input class=”form-control hidden” type="radio" name="image" value="<?php echo $file; ?>" <?php image_restore($file);?>>
-											<img class="iphone-radius img-responsive <?php if($file == "white"){echo white_visible;} ?>" src="<?php image_generater($file);?>" alt="<?php echo $file; ?>" />
+											<div>
+												<img class="iphone-radius img-responsive <?php if($file == "white"){echo white_visible;} ?>" src="<?php image_generater($file);?>" alt="<?php echo $file; ?>" />
+											</div>
 										</label>
 									</div>
 									<?php
