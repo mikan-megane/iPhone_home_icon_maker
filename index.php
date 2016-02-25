@@ -32,7 +32,7 @@
 	    }
 	}
 	///削除
-		function image_generater($image){//画像生成
+		function image_generater($image,$genmode = 0){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
 				switch ($_POST["color"]) {//色指定
@@ -55,11 +55,15 @@
 				$font = 'yasasisa.ttf';
 				imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
 				$mysession = $_COOKIE["PHPSESSID"];
-				ImagePNG( $im,"./generate/${mysession}${image}.png" );
-
+				if ($genmode == 0) {
+					ImagePNG( $im,"./generate/${mysession}${image}.png" );
+					echo "generate/${mysession}${image}.png";
+				} else {
+					ImagePNG( $im,"./create/${mysession}.png" );
+					echo "create/${mysession}.png";
+				}
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
-				echo "generate/${mysession}${image}.png";
 			} else {//初回
 				echo "image/${image}.jpg";
 			}
@@ -95,8 +99,8 @@
 			$selectimage = $_POST["image"];
 	?>
 			<title>memo</title>
-			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage");?>" >
-			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage");?>">
+			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage,1");?>" >
+			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage,1");?>">
 	</head>
 	<body>
 		<?php include_once("analyticstracking.php") ?>

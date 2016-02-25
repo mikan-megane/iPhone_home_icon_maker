@@ -1,4 +1,4 @@
-#SetEnvIf Referer "^http://mikan-php\.pe\.hu" ref_ok
-#order deny,allow
-#deny from all
-#allow from env=ref_ok
+SetEnvIf Referer "^http://mikan-php\.pe\.hu" ref_ok
+order deny,allow
+deny from all
+allow from env=ref_ok
