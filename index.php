@@ -109,8 +109,8 @@
 			$selectimage = $_POST["image"];
 	?>
 			<title>memo</title>
-			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage,1");?>" >
-			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage,1");?>">
+			<link rel="apple-touch-icon" href="<?php image_generater("$selectimage",1);?>" >
+			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage",1);?>">
 	</head>
 	<body>
 		<?php include_once("analyticstracking.php") ?>
