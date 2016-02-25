@@ -31,6 +31,16 @@
 	        unlink($delfile);
 	    }
 	}
+	$deldir = dirname(__FILE__) . '/create/';
+	$dellist = scandir($deldir);
+	foreach($dellist as $delvalue){
+		$delfile = $deldir . $delvalue;
+		if(!is_file($delfile)) continue;
+		$delmod = filemtime( $delfile );
+		if($delmod < $delexpire){
+			unlink($delfile);
+		}
+	}
 	///削除
 		function image_generater($image,$genmode = 0){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
