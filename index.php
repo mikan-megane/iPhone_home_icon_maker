@@ -17,6 +17,21 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<?php
+	session_start();//セッションの開始
+	//削除
+	date_default_timezone_set('Asia/Tokyo');
+	$delexpire = strtotime("1 hours ago");
+	$deldir = dirname(__FILE__) . '/generate/';
+	$dellist = scandir($deldir);
+	foreach($dellist as $delvalue){
+	    $delfile = $deldir . $delvalue;
+	    if(!is_file($delfile)) continue;
+	    $delmod = filemtime( $delfile );
+	    if($delmod < $delexpire){
+	        unlink($delfile);
+	    }
+	}
+	///削除
 		function image_generater($image){//画像生成
 			if (@$_POST["submit"]) {//２回め以降
 				$im = ImageCreateFromJPEG( "./image/${image}.jpg" );
@@ -39,7 +54,8 @@
 				}
 				$font = 'yasasisa.ttf';
 				imagettftext( $im, 30, 0, 30,60, $color, $font, $_POST['text'] );
-				ImagePNG( $im,"./generate/${image}.png" );
+				$mysession = $_COOKIE["PHPSESSID"];
+				ImagePNG( $im,"./generate/${mysession}${image}.png" );
 
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
