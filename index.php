@@ -59,7 +59,7 @@
 
 				imagecolordeallocate( $im,$color );
 				imagedestroy( $im );
-				echo "generate/${image}.png";
+				echo "generate/${mysession}${image}.png";
 			} else {//初回
 				echo "image/${image}.jpg";
 			}
