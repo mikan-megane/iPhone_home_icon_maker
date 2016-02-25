@@ -28,7 +28,9 @@
 	    if(!is_file($delfile)) continue;
 	    $delmod = filemtime( $delfile );
 	    if($delmod < $delexpire){
-	        unlink($delfile);
+			if (pathinfo($delfile,PATHINFO_EXTENSION) == "png") {
+				unlink($delfile);
+			}
 	    }
 	}
 	$deldir = dirname(__FILE__) . '/create/';
