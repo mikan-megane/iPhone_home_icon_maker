@@ -9,6 +9,16 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-72260865-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -115,7 +125,6 @@
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage",1);?>">
 	</head>
 	<body>
-		<?php include_once("analyticstracking.php") ?>
 		<header>
 			<div class="container">
 				<h3>メモジェネレータ</h3>
@@ -145,7 +154,6 @@
 		<title>メモジェネレータ</title>
 	</head>
 	<body>
-		<?php include_once("analyticstracking.php") ?>
 		<header>
 			<div class="container">
 				<h3>メモジェネレータ</h3>
