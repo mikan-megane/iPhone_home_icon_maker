@@ -155,9 +155,25 @@
 	</head>
 	<body>
 		<header>
-			<div class="container">
-				<h3>メモジェネレータ</h3>
-			</div>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="./">みかんのPHP</a>
+					</div>
+					
+					<div class="collapse navbar-collapse" id="navbarEexample1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="./iCon">メモジェネレータ</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</header>
 		<div class="container">
 			<form action="./" method="post">
