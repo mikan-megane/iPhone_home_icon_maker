@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-72260865-2', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
 	<?php
+	include '/common/head.php';
 	session_start();//セッションの開始
 	//削除
 	date_default_timezone_set('Asia/Tokyo');
@@ -125,12 +101,9 @@
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage",1);?>">
 	</head>
 	<body>
-		<header>
-			<div class="container">
-				<h3>メモジェネレータ</h3>
-			</div>
-		</header>
+		<?php include '/common/navbar.php'; ?>
 		<div class="container">
+			<h3>メモジェネレータ</h3>
 			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong><p style="margin-left:31px;">共有ボタンからホームに追加してください。<br>分からない方は<a target="_blank" href="http://www.ipodwave.com/iphone/howto/website_home.html#a" class="alert-link">こちら</a>を御覧ください</p></div>
 			<img class="iphone-radius center-block" src="<?php image_generater("$selectimage");?>" alt="apple-touch-icon" />
 			<div class="row">
@@ -154,28 +127,9 @@
 		<title>メモジェネレータ</title>
 	</head>
 	<body>
-		<header>
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="./">みかんのPHP</a>
-					</div>
-					
-					<div class="collapse navbar-collapse" id="navbarEexample1">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="./iCon">メモジェネレータ</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+		<?php include '/common/navbar.php'; ?>
 		<div class="container">
+			<h3>メモジェネレータ</h3>
 			<form action="./" method="post">
 				<div class="form-group panel panel-default">
 					<div class="panel-heading">
@@ -245,15 +199,7 @@
 			</form>
 		</div>
 		<br>
-		<footer class="footer">
-			<div class="container">
-				<p class="text-muted">Copyright © 2016 mikan-megane</p>
-			</div>
-		</footer>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<?php include '/common/footer.php'; ?>
 	</body>
 </html>
 <?php } ?>
