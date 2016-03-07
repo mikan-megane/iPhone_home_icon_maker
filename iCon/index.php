@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 	<?php
-	include ($_SERVER['DOCUMENT_ROOT'].'/lib/head.php');
+	include ($_SERVER['DOCUMENT_ROOT'].'/lib/head.html');
 	session_start();//セッションの開始
 	//削除
 	date_default_timezone_set('Asia/Tokyo');
@@ -115,7 +115,7 @@
 				</form>
 			</div>
 		</div>
-		<?php include ($_SERVER['DOCUMENT_ROOT'].'/lib/footer.php'); ?>
+		<?php include ($_SERVER['DOCUMENT_ROOT'].'/lib/footer.html'); ?>
 	</body>
 	<?php
 		} else {
@@ -195,7 +195,7 @@
 			</form>
 		</div>
 		<br>
-		<?php include ($_SERVER['DOCUMENT_ROOT'].'/lib/footer.php'); ?>
+		<?php include ($_SERVER['DOCUMENT_ROOT'].'/lib/footer.html'); ?>
 	</body>
 </html>
 <?php } ?>
