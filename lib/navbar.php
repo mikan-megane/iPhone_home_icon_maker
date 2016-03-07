@@ -34,7 +34,7 @@ function echo_current( $uri = "" ) {
 
 			<div class="collapse navbar-collapse" id="navbarEexample1">
 				<ul class="nav navbar-nav">
-					<li class="<?php is_current("iCon"); ?>"><a href="/iCon">メモジェネレータ</a></li>
+					<li class="<?php echo_current("iCon"); ?>"><a href="/iCon">メモジェネレータ</a></li>
 				</ul>
 			</div>
 		</div>

@@ -4,8 +4,8 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <!-- Bootstrap -->
-<link href="/common/css/bootstrap.min.css" rel="stylesheet">
-<link href="/common/css/style.css" rel="stylesheet">
+<link href="/lib/css/bootstrap.min.css" rel="stylesheet">
+<link href="/lib/css/style.css" rel="stylesheet">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

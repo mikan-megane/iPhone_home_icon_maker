@@ -2,11 +2,12 @@
 deny from all
 </Files>
 Options -Indexes
-ErrorDocument 403 /403-error.html
-ErrorDocument 404 /404-error.html
-ErrorDocument 500 /500-error.html
-ErrorDocument 502 /502-error.html
-ErrorDocument 504 /504-error.html
+ErrorDocument 403 /lib/403-error.html
+ErrorDocument 404 /lib/404-error.html
+ErrorDocument 500 /lib/500-error.html
+ErrorDocument 502 /lib/502-error.html
+ErrorDocument 503 /lib/503-error.html
+ErrorDocument 504 /lib/504-error.html
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^(www\.mikan-php\.pe\.hu)(:80)? [NC]
 RewriteRule ^(.*) http://mikan-php.pe.hu/$1 [R=301,L]
