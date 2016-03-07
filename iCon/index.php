@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 	<?php
-	include '/common/head.php';
+	include ($_SERVER['DOCUMENT_ROOT'].'/common/head.php');
 	session_start();//セッションの開始
 	//削除
 	date_default_timezone_set('Asia/Tokyo');
@@ -101,7 +101,7 @@
 			<link rel="apple-touch-icon" sizes="180x180" href="<?php image_generater("$selectimage",1);?>">
 	</head>
 	<body>
-		<?php include '/common/navbar.php'; ?>
+		<?php include ($_SERVER['DOCUMENT_ROOT'].'/common/navbar.php'); ?>
 		<div class="container">
 			<h3>メモジェネレータ</h3>
 			<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" style="margin-right:15px;"></span><strong>作成しました</strong><p style="margin-left:31px;">共有ボタンからホームに追加してください。<br>分からない方は<a target="_blank" href="http://www.ipodwave.com/iphone/howto/website_home.html#a" class="alert-link">こちら</a>を御覧ください</p></div>
@@ -115,11 +115,7 @@
 				</form>
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="container">
-				<p class="text-muted">Copyright © 2016 mikan-megane</p>
-			</div>
-		</footer>
+		<?php include ($_SERVER['DOCUMENT_ROOT'].'/common/footer.php'); ?>
 	</body>
 	<?php
 		} else {
@@ -127,7 +123,7 @@
 		<title>メモジェネレータ</title>
 	</head>
 	<body>
-		<?php include '/common/navbar.php'; ?>
+		<?php include ($_SERVER['DOCUMENT_ROOT'].'/common/navbar.php'); ?>
 		<div class="container">
 			<h3>メモジェネレータ</h3>
 			<form action="./" method="post">
@@ -199,7 +195,7 @@
 			</form>
 		</div>
 		<br>
-		<?php include '/common/footer.php'; ?>
+		<?php include ($_SERVER['DOCUMENT_ROOT'].'/common/footer.php'); ?>
 	</body>
 </html>
 <?php } ?>
