@@ -132,7 +132,7 @@
 						<label class="control-label">メモ</label>
 					</div>
 					<div class="panel-body">
-						<textarea class="form-control" name="text" rows="3" placeholder="Text input"><?php echo $text; ?></textarea>
+						<textarea class="form-control auto-wrap" name="text" cols="5" rows="3" wrap="hard" maxlength="15" placeholder="Text input"><?php echo $text; ?></textarea>
 						<span class="help-block">個人情報の入力はお控えください。</span>
 					</div>
 				</div>

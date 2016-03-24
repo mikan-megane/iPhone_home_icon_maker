@@ -9,6 +9,9 @@
 .white_visible{
 	box-shadow:0 0 1px 1px gray;
 }
+.auto-wrap{
+	width: inherit;
+}
 input[type="radio"]{
 	display: none;
 }
